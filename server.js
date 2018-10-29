@@ -30,7 +30,7 @@ app.use(function (req, res, next) {
 let initApp = require('./api/app');
 initApp(app);
 
-let server = app.listen(port);
+let server = app.listen(process.env.PORT || port);
 console.log('Flow server started on: ' + port);
 
 
